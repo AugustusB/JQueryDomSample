@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="scripts\domExample1.css">
+    <script type="text/javascript" src="..\jquery-2.1.1.js"></script>
+    <!-- <script src="scripts\Ex1.js"></script> -->
+    <script src="scripts\domExample1.js"></script>
+    <script>
+
+        $(function(){
+            // var ex1 = new Gus.ExJq.Ex1();
+            // // Chnage text to Hello World
+            // ex1.selectById('myContent');
+            // ex1.selectByAttribute('td[style="width:30%;"],td[style="width:70%;"]');
+            // ex1.selectInput('input[type="text"');
+            // ex1.selectAllInputs(':input');
+            // ex1.selectByContains('div:contains("my")');  
+            // ex1.selectTrOddEven('#DataTable1 tr:even');
+            // //ex1.selectTrOddEven('tr:first-child');
+            // ex1.selectEndStart('div[title^="Div"]');
+            // ex1.selectEndStart('div[title$="Table"]');
+            // ex1.selectEndStart('div[id*="myContent"]');
+        });
+
+    </script>
+
+</head>
+<body>
+    <div id ='OutputDic'>
+        hi
+    </div>
+    
+    <div id="TestDiv" title="Div Title asdf asdfsdf asdf">
+        This is my div text
+    </div>
+    
+    <div title="Contains Table">
+        <table id="DataTable">
+            <tr>
+                <td>Cell 1 Row 1</td>
+            </tr>
+            <tr>
+                <td>Cell 1 Row 2</td>
+            </tr>
+            <tr>
+                <td>Cell 1 Row 3</td>
+            </tr>
+            <tr>
+                <td>
+                <table style="width:100%">
+                    <tr>
+                        <td>Nested Table Cell and Row</td>
+                    </tr>
+                </table>
+                </td>
+            </tr>
+        </table>
+        <br />
+    </div>
+    <div class="BlueDiv">
+        <span>Blue div</span>
+    </div>
+    <br />
+    <span class="BlueDiv">This is my blue span</span>
+    <br />
+    <div class="RedDiv">
+        <span>Red div</span>
+    </div>
+    <p>
+        <img src="Images/pluralsight.png" />
+    </p>
+
+    <form id="form1">
+        <table style="width:300px;" id="DataTable1">
+            <tr>
+                <td style="width:30%;">First Name</td>
+                <td style="width:70%;"><input id="FirstNameTextBox" value="John" type="text" /></td>
+            </tr>   
+            <tr>
+                <td>Last Name</td>
+                <td><input id="LastNameTextBox" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Comments</td>
+                <td><textarea rows="5" cols="60" id="CommentsTextBox">TextArea</textarea></td>
+            </tr>           
+            <tr>
+                <td>
+                <select id="sel">
+                    <option value="AZ">AZ</option>
+                    <option value="CA" selected="true">CA</option>
+                </select></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td><input id="SubmitButton" type="button" value="Submit" /></td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>  
+
+    </form>
+        
+</body>
+</html>
