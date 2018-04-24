@@ -9,11 +9,22 @@
                 html += "<br>" + index + " " + $(this).text();
             });
             outputTo.html(html);
-        };
+        },
+
+        // Mapping
+        attrMapFunction = function attrMapFunction(findNode){
+            $(findNode).each(function(){
+                $(this).attr({
+                    title: 'Some attr set text',
+                    style: 'font-size:14pt;background-color:Yellow;color:Black'
+                })
+            });
+        }; 
 
         //Public members
         return {
-            itterateNode: itterateNode
+            itterateNode: itterateNode,
+            attrMapFunction: attrMapFunction
         };
     };
 

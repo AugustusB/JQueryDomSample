@@ -18,8 +18,9 @@
             //     outputTo.html(outputTo.html() + "<br>" + index + " " + $(this).text());
             // });
             var ex1Dom = new Gus.ExJqDom.DomWork();
-            ex1Dom.itterateNode('div.BlueDiv,div.RedDiv', '#OutputDiv')
-            // // Chnage text to Hello World
+            ex1Dom.itterateNode('div.BlueDiv,div.RedDiv', '#OutputDiv');
+            ex1Dom.attrMapFunction('div.BlueDiv,div.RedDiv');
+            // // Chnage text to Hello World;
             // ex1.selectById('myContent');
             // ex1.selectByAttribute('td[style="width:30%;"],td[style="width:70%;"]');
             // ex1.selectInput('input[type="text"');
