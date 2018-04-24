@@ -12,7 +12,13 @@
     <script>
 
         $(function(){
-            // var ex1 = new Gus.ExJq.Ex1();
+
+            // var outputTo = $('#OutputDiv');
+            // $('div.BlueDiv,div.RedDiv').each(function(index){
+            //     outputTo.html(outputTo.html() + "<br>" + index + " " + $(this).text());
+            // });
+            var ex1Dom = new Gus.ExJqDom.DomWork();
+            ex1Dom.itterateNode('div.BlueDiv,div.RedDiv', '#OutputDiv')
             // // Chnage text to Hello World
             // ex1.selectById('myContent');
             // ex1.selectByAttribute('td[style="width:30%;"],td[style="width:70%;"]');
@@ -24,20 +30,21 @@
             // ex1.selectEndStart('div[title^="Div"]');
             // ex1.selectEndStart('div[title$="Table"]');
             // ex1.selectEndStart('div[id*="myContent"]');
+
         });
 
     </script>
 
 </head>
 <body>
-    <div id ='OutputDic'>
+    <div id ='OutputDiv'>
         hi
     </div>
     
     <div id="TestDiv" title="Div Title asdf asdfsdf asdf">
         This is my div text
     </div>
-    
+
     <div title="Contains Table">
         <table id="DataTable">
             <tr>
