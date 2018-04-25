@@ -19,12 +19,48 @@
                     style: 'font-size:14pt;background-color:Yellow;color:Black'
                 })
             });
-        }; 
+        },
+        
+        // Append 
+        appendFunc = function appendFunc(findElem){
+            $(findElem).append('<span style="background-color:Green;color:white;font-size:14pt">Append a child 1</span>');
+        },
+        // Prepend
+        prependFunc = function prependFunc(findElem){
+            $(findElem).prepend('<span style="background-color:Green;color:white;font-size:14pt">Prepend a child 2</span>');
+        }, 
+
+        wrapFunc = function wrapFunc(findElem){
+            $(findElem).wrap('<div class="RedDiv,ParentWrapper">You been wrapped</div>');
+        },
+        
+        removeFunc = function removeFunc(findElem){
+            $(findElem).remove();
+        },
+
+        elemHighlight = function elemHighlight(findElem){
+            $(findElem).addClass('HighLight');
+        },
+
+        elemRemoveHighlight = function elemRemoveHighlight(findElem){
+            $(findElem).removeClass('HighLight');
+        },
+
+        toggleHighlight = function toggleHighlight(that) {
+            $(that).toggleClass('HighLight');
+        };
 
         //Public members
         return {
             itterateNode: itterateNode,
-            attrMapFunction: attrMapFunction
+            attrMapFunction: attrMapFunction,
+            appendFunc: appendFunc,
+            prependFunc: prependFunc,
+            wrapFunc: wrapFunc,
+            removeFunc: removeFunc,
+            elemHighlight: elemHighlight,
+            elemRemoveHighlight:elemRemoveHighlight,
+            toggleHighlight:toggleHighlight
         };
     };
 

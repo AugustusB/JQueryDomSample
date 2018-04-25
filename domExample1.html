@@ -10,16 +10,20 @@
     <!-- <script src="scripts\Ex1.js"></script> -->
     <script src="scripts\domExample1.js"></script>
     <script>
+        var ex2Dom = new Gus.ExJqDom.DomWork();
+        $(function(ex1Dom){
 
-        $(function(){
-
-            // var outputTo = $('#OutputDiv');
-            // $('div.BlueDiv,div.RedDiv').each(function(index){
-            //     outputTo.html(outputTo.html() + "<br>" + index + " " + $(this).text());
-            // });
             var ex1Dom = new Gus.ExJqDom.DomWork();
             ex1Dom.itterateNode('div.BlueDiv,div.RedDiv', '#OutputDiv');
             ex1Dom.attrMapFunction('div.BlueDiv,div.RedDiv');
+            ex1Dom.appendFunc('#TableContainerDiv');
+            ex1Dom.prependFunc('#TableContainerDiv');
+            ex1Dom.wrapFunc('span.foo');
+            ex1Dom.removeFunc('span.foo1');
+            
+            //ex1Dom.elemHighlight('input[type="text"]');
+            //ex1Dom.elemRemoveHighlight('#LastNameTextBox');
+            
             // // Chnage text to Hello World;
             // ex1.selectById('myContent');
             // ex1.selectByAttribute('td[style="width:30%;"],td[style="width:70%;"]');
@@ -46,7 +50,7 @@
         This is my div text
     </div>
 
-    <div title="Contains Table">
+    <div id='TableContainerDiv' title="Contains Table">
         <table id="DataTable">
             <tr>
                 <td>Cell 1 Row 1</td>
@@ -72,9 +76,11 @@
     <div class="BlueDiv">
         <span>Blue div</span>
     </div>
-    <br />
-    <span class="BlueDiv">This is my blue span</span>
-    <br />
+
+    <span class="foo1">Span 1</span>
+    <span class="foo">Span 2</span>
+    <span class="foo">Span 3</span>
+
     <div class="RedDiv">
         <span>Red div</span>
     </div>
@@ -86,11 +92,11 @@
         <table style="width:300px;" id="DataTable1">
             <tr>
                 <td style="width:30%;">First Name</td>
-                <td style="width:70%;"><input id="FirstNameTextBox" value="John" type="text" /></td>
+                <td style="width:70%;"><input id="FirstNameTextBox" value="John" type="text" onfocus="ex2Dom.toggleHighlight(this)" onblur="ex2Dom.toggleHighlight(this)" /></td>
             </tr>   
             <tr>
                 <td>Last Name</td>
-                <td><input id="LastNameTextBox" type="text" /></td>
+                <td><input id="LastNameTextBox" type="text" onfocus="ex2Dom.toggleHighlight(this)" onblur="ex2Dom.toggleHighlight(this)"/></td>
             </tr>
             <tr>
                 <td>Comments</td>

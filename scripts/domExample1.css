@@ -19,3 +19,9 @@
 .style1{
     width: 100%;
 }
+
+.HighLight{
+    background-color: purple;
+    color: white;
+    font-size: 14pt;
+}
